@@ -1,0 +1,92 @@
+/* 전체 화면 가운데 정렬 */
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #1e1e1e;
+    font-family: 'Arial', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 글쓰기 박스 */
+.write-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 12px;
+    width: 360px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 로고 이미지 */
+.write-box .logo {
+    width: 100px;
+    margin: 0 auto 20px;
+    opacity: 0.9;
+}
+
+/* 제목 */
+.write-box h2 {
+    margin-bottom: 25px;
+}
+
+/* 입력 요소 공통 */
+.write-box input,
+.write-box textarea,
+.write-box select {
+    width: 80%;
+    max-width: 280px;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* 텍스트에어리어 크기 고정 */
+.write-box textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* 버튼 그룹 정렬 */
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 80%;
+    max-width: 280px;
+    margin-top: 10px;
+}
+
+/* 버튼 공통 */
+.write-box button {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* 등록 버튼 */
+.write-box button[type="submit"] {
+    background-color: #f44336;
+    color: white;
+}
+
+/* 취소 버튼 */
+.write-box button[type="button"] {
+    background-color: #666;
+    color: white;
+}

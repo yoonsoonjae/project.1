@@ -1,0 +1,87 @@
+/* movie_detail.css */
+
+body {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.detail-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.poster {
+  flex: 0 0 500px;
+}
+
+.poster img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.info {
+  flex: 2;
+  text-align: left;
+}
+
+.info h1 {
+  margin-top: 0;
+  font-size: 2.5rem;
+  color: #f4c542;
+}
+
+.tagline {
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.meta div {
+  margin-bottom: 8px;
+}
+
+.overview {
+  margin: 20px 0 40px;
+  line-height: 1.8;
+}
+
+.cast-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.cast-member {
+  flex: 0 0 120px;
+  text-align: center;
+}
+
+.cast-member img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.cast-member .name {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.cast-member .character {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.error {
+  color: #ff6666;
+  font-weight: bold;
+  text-align: center;
+}

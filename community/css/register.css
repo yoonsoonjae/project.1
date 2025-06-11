@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #1e1e1e;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 12px;
+    width: 360px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+}
+
+.register-box .logo {
+    width: 100px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.register-box h2 {
+    margin-bottom: 25px;
+}
+
+.register-box .input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.register-box .input-box input {
+    width: 80%;
+    padding: 12px 12px 12px 45px;
+    background: #333;
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+.register-box .input-box i {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    color: #ccc;
+}
+
+.register-box button {
+    width: 380px;
+    max-width: 344px;
+    padding: 12px;
+    border: none;
+    background-color: #f44336;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.register-box .link {
+    margin-top: 15px;
+}
+
+.register-box .link a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.register-box .link a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: #f88;
+    margin-bottom: 15px;
+}

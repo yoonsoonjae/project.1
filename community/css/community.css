@@ -1,0 +1,328 @@
+/* ===== 기본 레이아웃 ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== 상단 로고 ===== */
+h1 {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.top-bar {
+    position: fixed;
+    top: 10px;
+    left: 10px; /* 왼쪽 정렬 */
+    width: 350px; /* 검색 버튼 ~ 환영 메시지까지 커버할 너비 */
+    height: 170px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    z-index: 500; /* 버튼 뒤로 배치 */
+}
+
+/* 평점 높은 영화 리스트 박스 */
+.top-rated-container {
+    display: flex;
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    margin-bottom: 100px;
+    border-radius: 4px;
+    background-color: #4e4e4e;
+}
+
+.carousel-btn {
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 4px;
+
+    /* margin-top 제거 */
+    margin-top: 0;        
+
+    /* 부모의 align-items:center와 무관하게 개별 아이템 중앙 정렬 */
+    align-self: center;   
+    
+    /* 버튼이 트랙 위에 떠 있도록 z-index 추가 (선택) */
+    z-index: 1;
+}
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.carousel-track {
+  display: flex;
+  flex-direction: row;   /* 수평 정렬 */
+  flex-wrap: nowrap;     /* 한 줄에 쭉 나열 */
+  transition: transform 0.3s ease;
+}
+
+/* “보이는 영역” 박스 폭을 이미지 폭과 동일하게 */
+.top-rated-box {
+  overflow: hidden;
+  flex: none;
+  width: 140px;     /* ← 이미지 가로 크기와 똑같이 */
+}
+
+/* 슬라이드 아이템 하나의 폭을 이미지 크기로 고정 */
+.top-rated-item {
+    position: relative; 
+    flex: 0 0 140px;  /* ← 이미지 가로 크기와 똑같이 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;   /* 위아래 여백만, 좌우 여백은 제거 */
+}
+
+/* 이미지도 동일 크기로 */
+.top-rated-item img {
+  width: 140px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.top-rated-item .badge {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(244, 67, 54, 0.9); /* 빨간 계열 */
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+
+
+/* ===== 로그인/로그아웃 영역 ===== */
+.auth-buttons {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.auth-button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 16px;
+    background-color: #f44336;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.2;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.auth-button:hover {
+    background-color: #d32f2f;
+    border: 2px solid black;
+    text-decoration: none;
+}
+
+.welcome-message {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    line-height: 1.1;
+    padding: 10px 0;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+
+
+/* 출시 영화 검색 버튼 위치 */
+.stat-button-box {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    z-index: 9999;
+}
+
+/* 글쓰기 버튼 위치 */
+.write-button-box {
+    position: fixed;
+    top: 140px;
+    left: 20px;
+    z-index: 9999;
+}
+
+/* 두 버튼 디자인 공통화 */
+.stat-button,
+.write-button {
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color: #f44336;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.stat-button:hover,
+.write-button:hover {
+    background-color: #d32f2f;
+    border: 2px solid black;
+}
+
+
+/* ===== 게시판 탭 ===== */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    border-bottom: 2px solid #ccc;
+}
+
+.tab {
+    padding: 10px 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 2px solid transparent;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #d32f2f;
+    border: 2px solid black;
+    border-bottom: none; 
+}
+
+.tab.active {
+    background-color: #b71c1c;
+    border: 2px solid black;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+.tab-content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.tab-content h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+/* ===== 게시물 출력 ===== */
+.post {
+    background-color: black;
+    color: white;
+    margin: 20px auto;
+    padding: 15px;
+    width: 80%;
+    border-radius: 8px;
+}
+.post h3 {
+    margin-top: 0;
+}
+
+/* ===== 댓글 영역 ===== */
+.comment {
+    background-color: #222;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+.comment-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.comment-form textarea {
+    width: 50%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 8px;
+    resize: none;
+    box-sizing: border-box;
+    margin-bottom: 6px;
+}
+
+.comment-form button {
+    padding: 8px 14px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #d32f2f;
+}
+
+
+/* ===== 페이지네이션 ===== */
+.pagination {
+    text-align: center;
+    margin-top: 30px;
+}
+.pagination a {
+    padding: 5px 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: black;
+}
+.pagination a.active {
+    font-weight: bold;
+    background-color: #ddd;
+}
+
+/* ===== footer ===== */
+
+.site-footer {
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+    padding: 30px 10px 20px;
+    margin-top: 40px;
+    border-top: 1px solid #444;
+}
