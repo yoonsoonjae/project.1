@@ -1,5 +1,5 @@
 <?php
-define('TMDB_API_KEY', '7b5df42e5a4228ee3994c22b50d469db');
+define('TMDB_API_KEY', '본인의 api 키값을 넣으세요!');
 
 function tmdb_request(string $endpoint, array $params = []): array {
     $base_url = "https://api.themoviedb.org/3/";
